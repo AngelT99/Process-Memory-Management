@@ -1,0 +1,22 @@
+CS
+
+(1)
+Shortest Job First, which the next process with the shortest completion time will be executed first
+
+(2)
+it performs well for batch-type processing. Because it significantly reduces the average waiting time for other processes awaiting execution than baselines algorithms. 
+
+(3)
+It may cause starvation if shorter processes keep coming. Because longer processes might not get the chance to run until all the shorter jobs finish, which increases their waiting time.
+
+
+CM 
+
+(1)
+If there are not enough empty pages to fit a process, evict all of the pages of the most-recently-executed process and keep evicting until there are enough empty pages. 
+
+(2)
+It performs well for round-robin since it takes the longest for the most-recently-executed process to run again, so we evict its pages for the other processes to run first.
+
+(3)
+It doesn't perform well if there is a large process that gets into the queue at the very beginning and keep taking up the pages without evicting for a very long time. Because it decreases the efficiency of mem_usage. (taking up space but not using it)
